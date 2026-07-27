@@ -161,27 +161,23 @@ with col_intro1:
         "이에 본 연구에서는 고등학생들의 소비 행동에 영향을 미치는 심리적 요인을 조사하고, 행동경제학의 주요 개념인 "
         "**앵커링 효과(Anchoring Effect)**, **손실회피 성향(Loss Aversion)**, **FOMO(Fear Of Missing Out) 현상**이 실제 소비 행동에 어떤 영향을 미치는지 분석하고자 하였습니다."
     )
-    
-    st.markdown("### 🎓 진로 및 융합 연계")
-    st.success(
-        "📊 **통계학:** 설문 데이터를 가공하고 교차분석 및 상관관계 분석을 수행하며 실증 통계의 유용성을 경험.\n\n"
-        "💼 **경영/마케팅:** 앵커링, FOMO 등 심리학 기반 마케팅의 영향력을 정량적 데이터로 실증 검증.\n\n"
-        "⚖️ **경제/세무:** 전통 경제학의 합리적 인간 가정을 넘어 제한된 합리성에 기초한 행동경제학 모형을 학습."
-    )
 
 with col_intro2:
     st.markdown("### Ⅱ. 연구 설계 개요")
-    with st.expander("❓ 본 탐구에서 검증하고자 하는 7가지 핵심 연구 문제"):
-        st.write("1. 고등학생은 구매 시 어떤 요소를 가장 중요하게 생각하는가?")
-        st.write("2. 할인 행사는 구매 의사에 영향을 미치는가?")
-        st.write("3. 앵커링 효과는 실제 구매 의사에 영향을 미치는가?")
-        st.write("4. 손실회피 성향은 구매 결정에 영향을 미치는가?")
-        st.write("5. FOMO 현상은 소비 행동에 영향을 미치는가?")
-        st.write("6. SNS 이용 시간과 충동구매 경험은 관련이 있는가?")
-        st.write("7. 소비유형에 따라 구매 행동의 차이가 존재하는가?")
-        
     st.markdown(
-        "**1. 연구 대상:** 고등학생 설문 응답자 대상 구글 폼 조사 수행\n\n"
+        "**❓ 본 탐구에서 검증하고자 하는 7가지 핵심 연구 문제**\n"
+        "1. 고등학생은 구매 시 어떤 요소를 가장 중요하게 생각하는가?\n"
+        "2. 할인 행사는 구매 의사에 영향을 미치는가?\n"
+        "3. 앵커링 효과는 실제 구매 의사에 영향을 미치는가?\n"
+        "4. 손실회피 성향은 구매 결정에 영향을 미치는가?\n"
+        "5. FOMO 현상은 소비 행동에 영향을 미치는가?\n"
+        "6. SNS 이용 시간과 충동구매 경험은 관련이 있는가?\n"
+        "7. 소비유형에 따라 구매 행동의 차이가 존재하는가?\n\n"
+        "---"
+    )
+    st.markdown(
+        "**1. 연구 대상:** 고등학생 설문 응답자 대상 구글 폼 조사 수행\n"
+        "   - 🔗 [설문조사 양식 바로가기 (Google Forms)](https://forms.gle/ELYwnUFwRwjTaJv77)\n\n"
         "**2. 연구 도구:** Python (pandas, Plotly, Streamlit) 대시보드\n\n"
         "**3. 분석 방법:**\n"
         "- 빈도수 및 백분율 요약 분석\n"
@@ -191,43 +187,29 @@ with col_intro2:
     )
 st.markdown("---")
 
-# SECTION 2: 행동경제학 개념 및 미니 체험존
+# SECTION 2: 행동경제학 개념 학습 & 인터랙티브 체험
 st.header("🧠 2. 행동경제학 개념 학습 & 인터랙티브 체험")
 st.markdown("고등학생들의 의사결정에 무의식적으로 작용하는 심리적 편향들을 개념적으로 이해하고 직접 테스트해 보세요.")
 
-col_c1, col_c2 = st.columns(2)
+col_c1, col_c2, col_c3 = st.columns(3)
+
 with col_c1:
     with st.container(border=True):
         st.subheader("1. 앵커링 효과 (Anchoring Effect)")
         st.write("- **뜻:** 처음에 제시된 숫자가 기준(닻)이 되어 그 이후의 판단에 치우침을 주는 편향.")
         st.write("- **비유:** 정가 10만원 제품에 선을 긋고 '5만원 특별 세일!'이라 적으면 5만원이 매우 싸 보임.")
-        
+
+with col_c2:
     with st.container(border=True):
         st.subheader("2. 손실회피 성향 (Loss Aversion)")
         st.write("- **뜻:** 이득을 얻는 기쁨보다 가지고 있던 것을 잃어버리는 고통을 2배 가깝게 더 크게 느끼는 본능.")
         st.write("- **비유:** '20% 할인 쿠폰 지급'보다 '오늘 지나면 20% 특별 할인 권한 영구 삭제'에 더 다급하게 구매 결정.")
-        
+
+with col_c3:
     with st.container(border=True):
         st.subheader("3. FOMO 현상 (소외 불안 심리)")
         st.write("- **뜻:** 나만 좋은 혜택이나 유행에서 뒤처지거나 소외될까 봐 불안해하는 심리.")
         st.write("- **비유:** 쇼핑몰의 '재고 단 3개 남음!', '오늘 마감', '한정 수량' 문구를 보면 조바심에 결제하게 됨.")
-
-with col_c2:
-    with st.container(border=True):
-        st.subheader("4. 베블렌 효과 (Veblen Effect)")
-        st.write("- **뜻:** 가격이 계속 올라감에도 과시욕구 때문에 오히려 수요가 늘어나는 현상 (명품 등).")
-        
-    with st.container(border=True):
-        st.subheader("5. 밴드웨건 효과 (Bandwagon Effect)")
-        st.write("- **뜻:** 다른 사람들이 많이 동조하고 유행하는 제품을 나도 따라서 대세를 타고 구매하는 편승 효과.")
-        
-    with st.container(border=True):
-        st.subheader("6. 스놉 효과 (Snob Effect)")
-        st.write("- **뜻:** 다수가 구매하는 흔한 유행템을 피하고 나만의 희소하고 독특한 개성을 지키려는 백로 효과.")
-
-    with st.container(border=True):
-        st.subheader("7. 사회적 증거 효과 (Social Proof)")
-        st.write("- **뜻:** 결정이 애매할 때 남들의 후기 개수나 평점에 기대어 안도하며 구매를 모방하는 현상.")
 
 # 미니 심리 실험
 st.markdown("#### 🎮 미니 심리 실험 시뮬레이터")
@@ -272,32 +254,45 @@ st.markdown("---")
 st.header("📝 3. 나의 소비유형 자가진단 테스트")
 st.markdown("설문 조사 문항을 기반으로 나에게 일치하는 수준을 선택해 보세요.")
 
+# 라디오 버튼 중앙 정렬 스타일 지정
+st.markdown("""
+    <style>
+    div[data-testid="stForm"] {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    div[role="radiogroup"] {
+        justify-content: center;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 with st.form("consumer_type_form"):
-    st.markdown("##### 🏷️ [가격 민감도 자가진단]")
+    st.markdown("<h5 style='text-align: center;'>🏷️ [가격 민감도 자가진단]</h5>", unsafe_allow_html=True)
     q1 = st.radio("Q1. 물건을 구매하기 전 여러 쇼핑몰의 가격을 꼼꼼히 비교해 본다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq1")
     q2 = st.radio("Q2. 할인 쿠폰이나 세일, 특가 정보를 평소 적극적으로 찾고 소비에 이용한다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq2")
     
-    st.markdown("##### 👑 [브랜드 신뢰성 자가진단]")
+    st.markdown("<h5 style='text-align: center;'>👑 [브랜드 신뢰성 자가진단]</h5>", unsafe_allow_html=True)
     q3 = st.radio("Q3. 가격이 더 비싸더라도 널리 알려진 브랜드 제품을 더 안전하다고 여겨 선호한다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq3")
     q4 = st.radio("Q4. 물건을 고를 때 제조사 브랜드의 대중적 이미지나 신뢰도를 매우 중요하게 여긴다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq4")
     
-    st.markdown("##### ⚡ [유행 및 친구 영향 자가진단]")
+    st.markdown("<h5 style='text-align: center;'>⚡ [유행 및 친구 영향 자가진단]</h5>", unsafe_allow_html=True)
     q5 = st.radio("Q5. SNS(인스타그램, 유튜브 등)에서 화제가 되거나 광고하는 인기 아이템에 흥미가 크다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq5")
     q6 = st.radio("Q6. 친구나 주위 사람들이 산 제품이나 추천하는 물건을 보면 나도 따라 사고 싶다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq6")
                   
-    st.markdown("##### 📝 [합리적 계획 소비 자가진단]")
+    st.markdown("<h5 style='text-align: center;'>📝 [합리적 계획 소비 자가진단]</h5>", unsafe_allow_html=True)
     q7 = st.radio("Q7. 충동적으로 사기보다는 이것이 나에게 꼭 진짜로 필요한가 고민 후 산다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq7")
     q8 = st.radio("Q8. 용돈 예산을 정해두고 그 지출 한도 가이드 안에서 소비하려고 노력한다.", 
                   options=["전혀 그렇지 않다", "그렇지 않다", "보통이다", "그렇다", "매우 그렇다"], index=2, horizontal=True, key="rq8")
                   
-    submit_test = st.form_submit_button("🔍 나의 소비 유형 종합 진단 결과 보기")
+    submit_test = st.form_submit_button("🔍 나의 소비 유형 종합 진단 결과 보기", use_container_width=True)
 
 if submit_test:
     score_p = LIKERT_MAP[q1] + LIKERT_MAP[q2]
